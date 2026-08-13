@@ -1,0 +1,10 @@
+{
+  "extensions": {
+    "Keyfactor.AnyGateway.Extensions.IDomainValidator": {
+      "LuaDnsDomainValidator": {
+        "assemblypath": "LuaDnsDomainValidator.dll",
+        "TypeFullName": "Keyfactor.Extensions.DomainValidator.LuaDns.LuaDnsDomainValidator"
+      }
+    }
+  }
+}
