@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="Keyfactor.DnsProvider.LuaDns/Keyfactor.DnsProvider.LuaDns.csproj" />
+  <Project Path="Keyfactor.DnsProvider.LuaDns.Tests/Keyfactor.DnsProvider.LuaDns.Tests.csproj" />
+</Solution>
