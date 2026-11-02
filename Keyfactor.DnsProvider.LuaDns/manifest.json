@@ -4,6 +4,10 @@
       "LuaDnsDomainValidator": {
         "assemblypath": "LuaDnsDomainValidator.dll",
         "TypeFullName": "Keyfactor.Extensions.DomainValidator.LuaDns.LuaDnsDomainValidator"
+      },
+      "LuaDnsCnameDomainValidator": {
+        "assemblypath": "LuaDnsDomainValidator.dll",
+        "TypeFullName": "Keyfactor.Extensions.DomainValidator.LuaDns.LuaDnsCnameDomainValidator"
       }
     }
   }
