@@ -43,6 +43,7 @@ The LuaDNS Provider plugin enables automated DNS-based domain validation for Key
 - Automated DNS TXT record creation and deletion in LuaDNS
 - HTTP Basic authentication using the account's username (email) and API key
 - Automatic zone discovery across all zones on the account, matched by longest domain suffix
+- Two validators sharing the same credentials: `dns-01` (publishes TXT records for ACME DNS-01) and `cname` (publishes CNAME records for CAs that require CNAME domain control validation, such as CSC Global)
 
 ## Requirements
 
@@ -157,6 +158,13 @@ Symptom: `401 Unauthorized` listing zones
 
 - Verify the API key has not been revoked in the LuaDNS dashboard
 - Confirm `LuaDns_Username` is the account's login email, not a display name
+
+**CA reports "No DNS provider matched domain ... for validation type 'cname'"**
+
+Symptom: the CA plugin (for example CSC Global) logs `unresolved` and asks for manual publishing
+
+- Create a Domain Validation Configuration of type `LuaDnsCnameDomainValidator`; a `LuaDnsDomainValidator` (`dns-01`) configuration does not match `cname` requests
+- Confirm the record's domain is covered by that configuration's domain list
 
 **Zone Not Found**
 
